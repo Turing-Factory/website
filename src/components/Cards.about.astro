@@ -1,0 +1,39 @@
+---
+import Card from "./Card.about.astro";
+
+interface PropsAbout {
+  title: string;
+  body: string;
+  image: string;
+  link?: string;
+}
+
+const props: PropsAbout[] = [
+  {
+    title: "About",
+    body: "Learn more about me",
+    image: "/images/about.jpg",
+    link: "/about",
+  },
+  {
+    title: "Projects",
+    body: "See what I've been working on",
+    image: "/images/projects.jpg",
+    link: "/projects",
+  },
+  {
+    title: "Blog",
+    body: "Read my latest posts",
+    image: "/images/blog.jpg",
+    link: "/blog",
+  },
+];
+---
+
+<section>
+  {
+    props.map((card) => {
+      return <Card {...card} />;
+    })
+  }
+</section>

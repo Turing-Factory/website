@@ -1,0 +1,52 @@
+---
+interface PropsServices {
+  title: string;
+  description: string;
+  image: string;
+}
+
+const cards: PropsServices[] = [
+  {
+    title: "Card 1",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    image: "https://picsum.photos/200/300",
+  },
+  {
+    title: "Card 2",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    image: "https://picsum.photos/200/300",
+  },
+  {
+    title: "Card 3",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    image: "https://picsum.photos/200/300",
+  },
+  {
+    title: "Card 4",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
+    image: "https://picsum.photos/200/300",
+  },
+];
+---
+
+<section>
+  <div>
+    {
+      cards.map(({ image, title, description }) => (
+        <>
+          <div>
+            <img src={image} alt="icons" />
+          </div>
+          <div>
+            <h3>{title}</h3>
+            <p>{description}</p>
+          </div>
+        </>
+      ))
+    }
+  </div>
+</section>
