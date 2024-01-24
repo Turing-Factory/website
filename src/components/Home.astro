@@ -1,3 +1,7 @@
+---
+import { Icon } from "astro-icon/components";
+---
+
 <main
     class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"
 >
@@ -14,14 +18,55 @@
                     ecommerces y landing pages. Puedes tener tu propio sitio a
                     medida en tiempo record.
                 </p>
-                <div>
+                <div class="flex items-center gap-2">
                     <button
-                        class="bg-customColors-azul hover:bg-customColors-azul/80 font-bold py-2 px-4 rounded mr-2 border text-white"
-                        >Trabajemos juntos</button
+                        class="bg-customColors-azul hover:bg-customColors-azul/80 flex items-center font-bold py-2 px-4 rounded text-white shadow-lg shadow-customColors-azul/50"
                     >
+                        <Icon
+                            name="mdi:send-variant"
+                            size={25}
+                            class="-rotate-45 mr-2"
+                        />
+                        <p>Trabajemos juntos</p>
+                    </button>
+
                     <button
-                        class="bg-white text-black font-semibold py-2 px-4 rounded border"
-                        >Conócenos</button
+                        class="bg-white text-black font-semibold py-2 px-4 rounded border flex items-center hover:bg-slate-100"
+                    >
+                        <Icon name="mdi:account" size={25} class="mr-2" />
+                        <p>Conócenos</p>
+                    </button>
+                </div>
+                <div
+                    class="flex items-center mx-auto absolute mb-4 inset-x-0 bottom-0 w-fit gap-6 bg-white border-customColors-azul border rounded-2xl p-2 shadow-lg shadow-customColors-azul/50"
+                >
+                    <a href="https://www.linkedin.com/company/turingfactory/"
+                        ><Icon
+                            name="mdi:linkedin"
+                            size={40}
+                            class="text-black hover:text-customColors-azul"
+                        /></a
+                    >
+                    <a href="https://www.instagram.com/turing_factory"
+                        ><Icon
+                            name="mdi:instagram"
+                            size={40}
+                            class="text-black hover:text-customColors-azul"
+                        /></a
+                    >
+                    <a href="https://twitter.com/TuringFactoryA"
+                        ><Icon
+                            name="mdi:twitter"
+                            size={40}
+                            class="text-black hover:text-customColors-azul"
+                        /></a
+                    >
+                    <a href="mailto:factoryturing@gmail.com"
+                        ><Icon
+                            name="mdi:email-outline"
+                            size={40}
+                            class="text-black hover:text-customColors-azul"
+                        /></a
                     >
                 </div>
             </div>
