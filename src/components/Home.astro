@@ -1,20 +1,53 @@
 ---
 import { Icon } from "astro-icon/components";
+import Cards from "./Cards.about.astro";
 ---
 
 <main
-    class="absolute inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"
+    class="inset-0 -z-10 h-full w-full bg-white bg-[linear-gradient(to_right,#f0f0f0_1px,transparent_1px),linear-gradient(to_bottom,#f0f0f0_1px,transparent_1px)] bg-[size:6rem_4rem]"
 >
     <div
-        class="absolute bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d8f0f3,transparent)]"
+        class="bottom-0 left-0 right-0 top-0 bg-[radial-gradient(circle_800px_at_100%_200px,#d8f0f3,transparent)]"
     >
-        <div class="h-screen flex items-center justify-center">
+        <div class="h-screen flex flex-row items-center justify-center">
+            <div
+                class="flex flex-col ml-6 w-fit gap-6 bg-white border rounded-2xl p-2 shadow-lg shadow-customColors-azul/50"
+            >
+                <a href="https://www.linkedin.com/company/turingfactory/"
+                    ><Icon
+                        name="mdi:linkedin"
+                        size={40}
+                        class="text-black hover:text-customColors-azul"
+                    /></a
+                >
+                <a href="https://www.instagram.com/turing_factory"
+                    ><Icon
+                        name="mdi:instagram"
+                        size={40}
+                        class="text-black hover:text-customColors-azul"
+                    /></a
+                >
+                <a href="https://twitter.com/TuringFactoryA"
+                    ><Icon
+                        name="mdi:twitter"
+                        size={40}
+                        class="text-black hover:text-customColors-azul"
+                    /></a
+                >
+                <a href="mailto:factoryturing@gmail.com"
+                    ><Icon
+                        name="mdi:email-outline"
+                        size={40}
+                        class="text-black hover:text-customColors-azul"
+                    /></a
+                >
+            </div>
             <div class="text-black max-w-lg grid grid-cols gap-6 mx-auto">
                 <h1 class="font-bold text-5xl text-customColors-azul">
-                    TURING FACTORY
+                    SOLUCIONES TÉCNOLOGICAS PARA TU NEGOCIO ONLINE
                 </h1>
                 <p class="text-lg">
-                    Turing Factory es una solución tecnológica para startups,
+                    Turing Factory brinda servicios tecnológicos para startups,
                     ecommerces y landing pages. Puedes tener tu propio sitio a
                     medida en tiempo record.
                 </p>
@@ -37,39 +70,8 @@ import { Icon } from "astro-icon/components";
                         <p>Conócenos</p>
                     </button>
                 </div>
-                <div
-                    class="flex items-center mx-auto absolute mb-4 inset-x-0 bottom-0 w-fit gap-6 bg-white border-customColors-azul border rounded-2xl p-2 shadow-lg shadow-customColors-azul/50"
-                >
-                    <a href="https://www.linkedin.com/company/turingfactory/"
-                        ><Icon
-                            name="mdi:linkedin"
-                            size={40}
-                            class="text-black hover:text-customColors-azul"
-                        /></a
-                    >
-                    <a href="https://www.instagram.com/turing_factory"
-                        ><Icon
-                            name="mdi:instagram"
-                            size={40}
-                            class="text-black hover:text-customColors-azul"
-                        /></a
-                    >
-                    <a href="https://twitter.com/TuringFactoryA"
-                        ><Icon
-                            name="mdi:twitter"
-                            size={40}
-                            class="text-black hover:text-customColors-azul"
-                        /></a
-                    >
-                    <a href="mailto:factoryturing@gmail.com"
-                        ><Icon
-                            name="mdi:email-outline"
-                            size={40}
-                            class="text-black hover:text-customColors-azul"
-                        /></a
-                    >
-                </div>
             </div>
         </div>
+        <Cards />
     </div>
 </main>
