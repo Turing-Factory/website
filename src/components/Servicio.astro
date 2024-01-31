@@ -1,4 +1,5 @@
 ---
+import { Icon } from "astro-icon/components";
 interface PropsServices {
   title: string;
   description: string;
@@ -7,45 +8,58 @@ interface PropsServices {
 
 const cards: PropsServices[] = [
   {
-    title: "Card 1",
+    title: "Potencia tu presencia digital",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-    image: "https://picsum.photos/200/300",
+      "En el mundo moderno contar con una página web es algo esencial: cada año las ventas de forma online aumentan a pasos agigantados, el 20% de todas las compras del mundo que se hacen en comercio minorista son a través de alguna tienda online y se espera que esto aumente a 1 de cada 4 compras para el año 2026.",
+    image: "/stock2.jpg",
   },
   {
-    title: "Card 2",
+    title: "Inspira confianza",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-    image: "https://picsum.photos/200/300",
+      "Cualquier empresa sea una PYME, un emprendimiento o un microemprendiemiento necesita un sitio web donde exponer sus productos o servicios, esto le dará confianza a tus potenciales clientes lo cual asegurará más ventas y más visibilidad en las plataformas digitales.",
+    image: "/stock3.jpg",
   },
   {
-    title: "Card 3",
+    title: "Soporte personalizado 1 a 1",
     description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-    image: "https://picsum.photos/200/300",
-  },
-  {
-    title: "Card 4",
-    description:
-      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.",
-    image: "https://picsum.photos/200/300",
+      "Responderemos cualquier consulta que tengas por el medio que elijas y te guiaremos en todo lo posible, queremos brindarte la mejor atención posible con lo que nunca usaremos bots ni ningún sistema de respuesta automática.",
+    image: "/stock4.jpg",
   },
 ];
 ---
 
-<section>
+<section
+  class="bg-gradient-to-l from-customColors-azul/10 via-white to-transparent"
+>
   <div>
     {
-      cards.map(({ image, title, description }) => (
-        <>
-          <div>
-            <img src={image} alt="icons" />
+      cards.map(({ image, title, description }, index) => (
+        <div
+          class={`flex flex-row justify-center items-center mx-16 py-24 gap-24 p-18 ${
+            index % 2 === 0 ? "" : "flex-row-reverse"
+          }`}
+        >
+          <div class="max-w-lg">
+            <img
+              src={image}
+              alt="image"
+              class="rounded size-full object-cover shadow-xl"
+            />
           </div>
-          <div>
-            <h3>{title}</h3>
-            <p>{description}</p>
+          <div class="text-balance max-w-xl">
+            <div class="flex items-center">
+              <Icon
+                name="mdi:square-rounded"
+                size={20}
+                class="mr-2 text-customColors-azul"
+              />
+              <h1 class="font-bold leading-loose text-3xl uppercase">
+                {title}
+              </h1>
+            </div>
+            <p class="text-lg leading-relaxed text-slate-500">{description}</p>
           </div>
-        </>
+        </div>
       ))
     }
   </div>

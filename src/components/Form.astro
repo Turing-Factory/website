@@ -1,0 +1,114 @@
+---
+import { Icon } from "astro-icon/components";
+export const handleSubmit = () => {};
+---
+
+<div class="bg-slate-900 text-white text-lg">
+      <div
+            class="flex flex-row justify-center items-center mx-16 py-24 gap-24 p-8"
+      >
+            <div class="max-w-lg">
+                  <h1 class="font-bold text-4xl leading-loose uppercase">
+                        Trabajemos juntos
+                  </h1>
+                  <p class="text-balance text-slate-400">
+                        Cuéntanos como podemos ayudarte. Puedes utilizar el
+                        formulario o escribirnos en cualquiera de nuestras
+                        redes, te contestaremos en menos de 24 horas sin
+                        excepción.
+                  </p>
+                  <div class="flex flex-row gap-4 mt-4">
+                        <a
+                              href="https://www.linkedin.com/company/turingfactory/"
+                        >
+                              <Icon
+                                    name="mdi:linkedin"
+                                    size={25}
+                                    class="hover:text-customColors-azul"
+                              />
+                        </a>
+
+                        <a href="https://www.instagram.com/turing_factory/">
+                              <Icon
+                                    name="mdi:instagram"
+                                    size={25}
+                                    class="hover:text-customColors-azul"
+                              />
+                        </a>
+
+                        <a href="https://twitter.com/TuringFactoryA">
+                              <Icon
+                                    name="mdi:twitter"
+                                    size={25}
+                                    class="hover:text-customColors-azul"
+                              />
+                        </a>
+                  </div>
+            </div>
+
+            <form class="w-full">
+                  <div class="mb-4">
+                        <label for="nombre" class="block">Nombre</label>
+                        <input
+                              type="text"
+                              id="nombre"
+                              name="nombre"
+                              required
+                              class="mt-1 p-2 w-full rounded text-slate-900 focus:outline-none focus:ring focus:ring-customColors-azul focus:shadow-lg focus:shadow-customColors-azul/50"
+                        />
+                  </div>
+
+                  <div class="mb-4">
+                        <label for="email" class="block">Email</label>
+                        <input
+                              type="email"
+                              id="email"
+                              name="email"
+                              required
+                              class="mt-1 p-2 w-full rounded text-slate-900 focus:outline-none focus:ring focus:ring-customColors-azul focus:shadow-lg focus:shadow-customColors-azul/50"
+                        />
+                  </div>
+
+                  <div class="mb-4">
+                        <label for="servicio" class="block"
+                              >Seleccione un servicio</label
+                        >
+                        <select
+                              id="servicio"
+                              name="servicio"
+                              required
+                              class="mt-1 p-2 w-full rounded text-slate-900 focus:outline-none focus:ring focus:ring-customColors-azul focus:shadow-lg focus:shadow-customColors-azul/50"
+                        >
+                              <option value="e-commerce">E-commerce</option>
+                              <option value="landing-page">Landing Page</option>
+                              <option value="blog">Blog</option>
+                              <option value="otro">Otro</option>
+                        </select>
+                  </div>
+
+                  <div class="mb-4">
+                        <label for="mensaje" class="block">Mensaje</label>
+                        <textarea
+                              id="mensaje"
+                              name="mensaje"
+                              rows="4"
+                              required
+                              class="mt-1 p-2 w-full rounded text-slate-900 focus:outline-none focus:ring focus:ring-customColors-azul focus:shadow-lg focus:shadow-customColors-azul/50"
+                        ></textarea>
+                  </div>
+
+                  <div>
+                        <button
+                              class="bg-customColors-azul hover:bg-customColors-azul/80 flex items-center font-bold py-2 px-4 rounded text-white shadow-lg shadow-customColors-azul/50"
+                        >
+                              <Icon
+                                    name="mdi:send-variant"
+                                    size={25}
+                                    class="-rotate-45 mr-2"
+                              />
+                              <p>Enviar</p>
+                        </button>
+                  </div>
+            </form>
+      </div>
+</div>

@@ -1,0 +1,63 @@
+---
+import { Icon } from "astro-icon/components";
+interface PropsPortafoly {
+  image: string;
+  title: string;
+  description: string;
+  linkDemo?: string;
+}
+
+const propsPortafoly: PropsPortafoly[] = [
+  {
+    image: "/aboutStock.jpg",
+    title: "Ezequiel",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo minima iusto doloribus, natus aliquid veritatis ad esse aliquam quis nam, animi cupiditate sequi provident maxime repudiandae aut facere porro officia.",
+    linkDemo: "https://portafolio-ten.vercel.app/",
+  },
+  {
+    image: "/aboutStock.jpg",
+    title: "Imanol",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo minima iusto doloribus, natus aliquid veritatis ad esse aliquam quis nam, animi cupiditate sequi provident maxime repudiandae aut facere porro officia.",
+    linkDemo: "https://portafolio-ten.vercel.app/",
+  },
+  {
+    image: "/aboutStock.jpg",
+    title: "Valentina",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo minima iusto doloribus, natus aliquid veritatis ad esse aliquam quis nam, animi cupiditate sequi provident maxime repudiandae aut facere porro officia.",
+    linkDemo: "https://portafolio-ten.vercel.app/",
+  },
+  {
+    image: "/aboutStock.jpg",
+    title: "Nahuel",
+    description:
+      "Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo minima iusto doloribus, natus aliquid veritatis ad esse aliquam quis nam, animi cupiditate sequi provident maxime repudiandae aut facere porro officia.",
+    linkDemo: "https://portafolio-ten.vercel.app/",
+  },
+];
+---
+
+<section class="bg-white text-slate-900">
+  <h1 class="text-center py-16 text-4xl font-bold uppercase">Nuestro equipo</h1>
+  <div class="grid grid-cols-2 gap-4 p-4">
+    {
+      propsPortafoly.map(({ image, title, description, linkDemo }, index) => (
+        <div class="grid grid-cols-2 mx-8 py-24 gap-6 p-4">
+          <div class="max-w-lg">
+            <img
+              src={image}
+              alt="image"
+              class="rounded size-full object-cover shadow-xl"
+            />
+          </div>
+          <div class="text-balance max-w-xl">
+            <h1 class="font-bold leading-loose text-3xl capitalize">{title}</h1>
+            <p class="text-lg leading-relaxed text-slate-500">{description}</p>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</section>

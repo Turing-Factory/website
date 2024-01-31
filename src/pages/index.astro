@@ -1,14 +1,16 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import Home from "../components/Home.astro";
-import Cards from "../components/Cards.about.astro";
-import Servicio from "../components/Servicio.astro";
-import Portafolio from "../components/Portafolio.astro";
+import Servicio from "@components/Servicio.astro";
+import About from "@components/About.astro";
+import Navbar from "@components/Navbar.astro";
+import Form from "@components/Form.astro";
 ---
 
 <Layout title="Turing Factory Web Site">
+	<Navbar />
 	<Home />
-	<!-- 	<Cards /> -->
-	<!-- 	<Servicio />
-	<Portafolio /> -->
+	<Servicio />
+	<Form />
+	<About />
 </Layout>
